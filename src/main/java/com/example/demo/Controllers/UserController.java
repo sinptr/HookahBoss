@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     private UserDetailsServiceUtil userDetailsServiceUtil;
 
-    @GetMapping
+    @GetMapping("/reg")
     public ModelAndView getRegistrationForm(){
         return new ModelAndView("reg");
     }

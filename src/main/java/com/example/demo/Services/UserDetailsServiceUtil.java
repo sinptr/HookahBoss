@@ -54,4 +54,8 @@ public class UserDetailsServiceUtil implements org.springframework.security.core
         }
         return newUser;
     }
+
+    public Iterable<User> getUsers(){
+        return userRepository.findAll();
+    }
 }

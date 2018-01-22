@@ -2,18 +2,18 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/register_page.css}"/>
     <meta charset="UTF-8"/>
     <title>Регистрация</title>
 </head>
 <body>
-    <div th:inline="text">
+    <div class="login-page" th:inline="text">
         <div th:if="${user != null}">Вы зарегистрированы, [[${user.username}]] </div>
-        <div th:unless="${user != null}">
-            <form th:action="@{/reg}" method="post">
-                <h2>Регистрация</h2>
-                <div><label>Имя пользователя: <input type="text" name="username"/></label></div>
-                <div><label>Пароль: <input type="password" name="password"/></label></div>
-                <div><button type="submit">Зарегистрировать!</button></div>
+        <div class="form" th:unless="${user != null}">
+            <form class="login-form" th:action="@{/reg}" method="post">
+                <input type="text" name="username" placeholder="name"/>
+                <input type="password" name="password" placeholder="password"/>
+                <button type="submit">create</button>
             </form>
         </div>
     </div>

@@ -13,4 +13,8 @@ public class ManufacturerService {
     public Iterable getManufacturers() {
         return manufacturerRepository.findAll();
     }
+
+    public Manufacturer getManufacturer(long id){
+        return manufacturerRepository.findOne(id);
+    }
 }
