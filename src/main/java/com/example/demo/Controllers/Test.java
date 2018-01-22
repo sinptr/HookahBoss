@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-@RequestMapping("/hookah")
+@RequestMapping
 public class Test {
 
     @Autowired
@@ -27,7 +27,7 @@ public class Test {
         return "hookahs";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/hookah/{id}")
     public String getHookah(@PathVariable long id, ModelMap model){
         model.addAttribute("hookah", hookahService.getHookah(id));
         return "hookah";
