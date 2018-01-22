@@ -1,0 +1,26 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Кальянчики</title>
+</head>
+<body>
+<h1 th:text="${hookah.manufacturer.name + ' ' + hookah.name}"></h1>
+<p th:text="${hookah.description}"></p>
+<table>
+    <tr>
+        <td>
+            Цена:
+        </td>
+        <td th:text="${hookah.price} + ' руб.'"></td>
+    </tr>
+    <tr>
+        <td>
+            Колба:
+        </td>
+        <td th:text="${hookah.bottle.name + ' ' + hookah.bottle.volume}"></td>
+    </tr>
+</table>
+</body>
+</html>
