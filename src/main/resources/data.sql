@@ -1,0 +1,4 @@
+INSERT INTO HOOKAH (ID, NAME)
+	VALUES
+		(1, 'HOOKAH 1'),
+		(2, 'HOOKAH 2');
