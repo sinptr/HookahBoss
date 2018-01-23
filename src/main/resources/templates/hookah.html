@@ -6,6 +6,16 @@
     <title th:text="${hookah.manufacturer.name + ' ' + hookah.name}"></title>
 </head>
 <body>
+<header style="text-align: right;">
+    <div th:if="${currentUser}">
+        <span th:text="${currentUser.getUsername()}"></span>
+        <a href="/logout">Выйти</a>
+    </div>
+    <div th:unless="${currentUser}">
+        <a href="/login">Войти  </a>
+        <a href="/reg">Регистрация</a>
+    </div>
+</header>
 <h1 th:text="${hookah.manufacturer.name + ' ' + hookah.name}"></h1>
 <p th:text="${hookah.description}"></p>
 <table>

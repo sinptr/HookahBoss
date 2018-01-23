@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Кальянчики</title>
+    <title>Мир кальянов</title>
 </head>
 <body>
 <header style="text-align: right;">
@@ -16,9 +16,14 @@
         <a href="/reg">Регистрация</a>
     </div>
 </header>
-<h1>Кальяны</h1>
-<ul th:each="hookah : ${hookahs}">
-    <li><a th:href="${'/hookah/' + hookah.id}" th:text="${hookah.manufacturer.name + ' ' + hookah.name}"></a></li>
+<h1>Добро пожаловать</h1>
+<ul>
+    <li>
+        <a href="/hookahs">Все кальяны</a>
+    </li>
+    <li>
+        <a href="/models">Производители</a>
+    </li>
 </ul>
 </body>
 </html>

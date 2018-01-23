@@ -21,7 +21,7 @@ public class Test {
     @Autowired
     HookahService hookahService;
 
-    @GetMapping
+    @GetMapping("/hookahs")
     public String getPersons(ModelMap model){
         model.addAttribute("hookahs", hookahService.getHookahs());
         return "hookahs";

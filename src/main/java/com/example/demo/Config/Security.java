@@ -1,6 +1,7 @@
 package com.example.demo.Config;
 
 
+import com.example.demo.Components.UserLogoutSuccessHandler;
 import com.example.demo.Services.UserDetailsServiceUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
@@ -24,13 +25,14 @@ public class Security extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/reg", "/console/**", "/css/**").permitAll()
+                .antMatchers("/", "/reg", "/css/**", "/hookah/**", "/hookahs").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().permitAll()
                 .loginPage("/login")
                 .and()
-                .logout().permitAll();
+                .logout().permitAll()
+                .logoutSuccessHandler(new UserLogoutSuccessHandler());
 
         http
                 .csrf()
