@@ -2,20 +2,19 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/admin.css}"/>
     <meta charset="UTF-8"/>
-    <title>Admen</title>
+    <title>Административная панель</title>
 </head>
 <body>
-<h1>Admen page</h1>
-<table border="1">
+<h1>Список пользователей</h1>
+<table>
     <tbody th:each="user : ${users}">
     <tr>
         <td th:text="${user.id}"></td>
         <td th:text="${user.username}"></td>
-        <td>
-            <ul th:each="role : ${user.roles}">
-                <li th:text="${role.role}"></li>
-            </ul>
+        <td th:each="role : ${user.roles}">
+           <p th:text="${role.role} "></p>
         </td>
     </tr>
     </tbody>
