@@ -29,6 +29,9 @@ public class UserController {
         System.out.println(params.get("password"));
         User newUser = userDetailsServiceUtil.registrUser(params.get("username"), params.get("password"));
         model.put("user", newUser);
-        return new ModelAndView("reg", model);
+        if (newUser == null)
+            return new ModelAndView("reg", model);
+        else
+            return new ModelAndView("redirect:/login", model);
     }
 }

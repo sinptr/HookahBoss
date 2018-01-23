@@ -10,6 +10,7 @@
     <div class="login-page" th:inline="text">
         <div th:if="${user != null}">Вы зарегистрированы, [[${user.username}]] </div>
         <div class="form" th:unless="${user != null}">
+            <p>Регистрация</p>
             <form class="login-form" th:action="@{/reg}" method="post">
                 <input type="text" name="username" placeholder="name"/>
                 <input type="password" name="password" placeholder="password"/>

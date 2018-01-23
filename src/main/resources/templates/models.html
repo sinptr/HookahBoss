@@ -6,7 +6,7 @@
     <title>Производители</title>
 </head>
 <body>
-<h1>КПроизводители</h1>
+<h1>Производители</h1>
 <ul th:each="model : ${models}">
     <li><a th:href="${'/model/' + model.id}" th:text="${model.name}"></a></li>
 </ul>

@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Кальянчики</title>
+    <title th:text="${hookah.manufacturer.name + ' ' + hookah.name}"></title>
 </head>
 <body>
 <h1 th:text="${hookah.manufacturer.name + ' ' + hookah.name}"></h1>

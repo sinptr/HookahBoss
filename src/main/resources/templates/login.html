@@ -4,11 +4,12 @@
 <head>
     <link rel="stylesheet" type="text/css" th:href="@{/css/register_page.css}"/>
     <meta charset="UTF-8"/>
-    <title>Регистрация</title>
+    <title>Авторизация</title>
 </head>
 <body>
 <div class="login-page">
     <div class="form">
+        <p>Авторизация</p>
         <form class="login-form" th:action="@{/login}" method="post">
             <input type="text" name="username" placeholder="name"/>
             <input type="password" name="password" placeholder="password"/>
